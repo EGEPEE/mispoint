@@ -10,11 +10,11 @@ This repository is about app which calculate customers' point, we use ERPNext to
 # Team & Branch
 | Name          | Github                                             | Branch        | 
 | ------------- |:--------------------------------------------------:|:-------------:|
-|               | Master                                             | Master        |
-|               | DevProcess                                         | DevProcess    |
+|               | 	                                                 | Master        |
+|               | 		                                             | DevProcess    |
 | Dimas         | [dshirogami](https://github.com/dshirogami)        |               |
-| Ega           | [EGEPEE] (https://github.com/EGEPEE)               |               |
-| Renvil        |                                                    |               |
+| Ega           | [EGEPEE](https://github.com/EGEPEE)                |               |
+| Renvil        | [Renvil](https://github.com/schlucy)               |               |
 | Reza          | [RezzaACM](https://github.com/RezzaACM)            |               |
 
 ------
@@ -26,7 +26,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
     * Get erpnext app: `bench get-app erpnext https://training@dev.azure.com/devmis004/erpnext-training/_git/erpnext-training`
     * Install erpnext app: `bench --site mis.point.com install-app erpnext`
     * Check your project: `bench start`
-    *Default setting like Note*
+    * *Default setting like Note*
 2. Existing Project
     * Open your existing project **Optional : `cd /opt/erpnext/mispoint`**
     * Get **point app**: `bench get-app appname https://github.com/EGEPEE/mispoint.git`
@@ -53,6 +53,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
 # Workflow 
 #### On Progress
 
+------
 # License
 
 MIT
