@@ -4,7 +4,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
 ------
 # Feature
 * Calculate Point
-* On Progress
+#### On Progress
 
 ------
 # Team & Branch
@@ -14,7 +14,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
 |               | 		                                             | DevProcess    |
 | Dimas         | [dshirogami](https://github.com/dshirogami)        |               |
 | Ega           | [EGEPEE](https://github.com/EGEPEE)                |               |
-| Renvil        | [Renvil](https://github.com/schlucy)               |               |
+| Renvil        | [schlucy](https://github.com/schlucy)              |               |
 | Reza          | [RezzaACM](https://github.com/RezzaACM)            |               |
 
 ------
@@ -27,6 +27,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
     * Install erpnext app: `bench --site mis.point.com install-app erpnext`
     * Check your project: `bench start`
     * *Default setting like Note*
+    * Active developer mode on path **/sites/sites_config.json**, add: `"developer_mode": 1,` after db_password
 2. Existing Project
     * Open your existing project **Optional : `cd /opt/erpnext/mispoint`**
     * Get **point app**: `bench get-app appname https://github.com/EGEPEE/mispoint.git`
@@ -34,7 +35,24 @@ This repository is about app which calculate customers' point, we use ERPNext to
     * Run server: `bench start`
     * Open new terminal on project path
     * Migrate app: `bench migrate`
-3. Check your app, it will exist in Doctype -- Module
+4. Check your app, it will exist in Doctype -- Module
+
+------
+# Pull Repository
+1. Open point app **Optional : `cd /opt/erpnext/mispoint/apps/point`**
+2. Pull repo: `git pull --rebase`
+3. Update the bench on */opt/erpnext/mispoint*: `bench update --reset`
+4. Run server: `bench start`
+5. Open new terminal on project path
+6. Migrate app: `bench migrate`
+5. Check your app in the Doctype
+
+------
+# Push Repository
+1. Open point app **Optional : `cd /opt/erpnext/mispoint/apps/point`**
+2. Add all file: `git add .`
+3. Commit your file to repo: `git commit -m "**summary your file which had a modified data**"`. Ex: *git commit -m "modified readme.md"*
+4. Push to repository: `git push`
 
 ------
 # Note
@@ -48,6 +66,7 @@ This repository is about app which calculate customers' point, we use ERPNext to
 3. Installed
     * App/Module: Point
     * Site: mis.point.com
+4. Don't forget to add developer mode!
     
 ------
 # Workflow 
