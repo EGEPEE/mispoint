@@ -25,27 +25,34 @@ class MasterTransaksi(Document):
 
 				item.save()
 
-	# Mengganti status member jika melebihi
+	# Mengganti status member jika melebihi point
 	def change_status_member(self):
 		if self.transaksi:
 			member = frappe.get_doc('Master Member', self.id_member)
 			point_scale = frappe.get_all('Point Scale', filters={}, fields=['tipe_point', 'min_point'])
-		
-			point_member = self.calculate + self.point_member
+
 			status_awal_level = member.status_level
+			point_member = self.calculate + self.point_member
 			
 			i = 0
 			while i < len(point_scale):
 				if point_member >= point_scale[i]['min_point']: 
 					status_level = point_scale[i]['tipe_point']
 				i = i + 1
-			
-			if status_awal_level != status_level:
-				print(status_level)
 
 			member.point_member = point_member
 			member.status_level = status_level
 			member.save()
+
+@frappe.whitelist()
+def hit_point(doctype, name, tukarpoint):
+	member = frappe.get_doc(doctype, name)
+	point_member = float(member.point_member) - float(tukarpoint)
+
+	member.point_member = point_member
+	member.save()
+
+	return point_member
 
 			
 

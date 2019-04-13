@@ -1,0 +1,26 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2019-04-11 22:25:21.197397",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Master Transaksi",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2019-04-11 22:25:21.197397",
+ "modified_by": "Administrator",
+ "module": "Point",
+ "name": "Congratulation! You are up to {{ doc.status_level }}",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "email_by_document_field": "owner",
+   "email_by_role": "Administrator"
+  }
+ ],
+ "subject": "Congratulation! You are up to {{ doc.status_level }}"
+}

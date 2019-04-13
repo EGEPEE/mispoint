@@ -3,8 +3,28 @@ This repository is about app which calculate customers' point, we use ERPNext to
 
 ------
 # Feature
-* Calculate Point
-#### On Progress
+### Calculate Point
+### Claim Point
+### Print Format 
+To customize print format to your project, you can do:
+1. Run server on project `bench start`
+2. Search **Letter Head List** then `Make A New Letter Head`
+    * Enter letter head name : **Optional: header mispoint"
+    * Checklist `is default` then save
+    * Attach image **Optional: mispoint.jpeg** and customize the form
+    * Save
+3. Search in **Setup**, choose : *Print Heading*
+    * New, and give name `Transaksi`
+4. Search in **Setup**, choose : *Print Format*
+    * Enter name: **Optional: Print Member**
+    * Enter doctype: **Optional: Master Member**
+    * Choose `Yes` on standart
+    * Enter the code of html `printformat.html` to the form
+    * Enter the code of css `printformat.css` to the form
+    
+------
+# Workflow 
+
 
 ------
 # Team & Branch
@@ -67,10 +87,6 @@ This repository is about app which calculate customers' point, we use ERPNext to
     * App/Module: Point
     * Site: mis.point.com
 4. Don't forget to add developer mode!
-    
-------
-# Workflow 
-#### On Progress
 
 ------
 # License
