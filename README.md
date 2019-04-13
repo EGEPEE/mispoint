@@ -3,13 +3,13 @@ This repository is about app which calculate customers' point, we use ERPNext to
 
 ------
 # Feature
-### Calculate Point
-### Claim Point
-### Print Format 
-To customize print format to your project, you can do:
+#### Calculate Point
+#### Claim Point
+#### Print Format 
+* To customize the print format for your project, you can do:
 1. Run server on project `bench start`
 2. Search **Letter Head List** then `Make A New Letter Head`
-    * Enter letter head name : **Optional: header mispoint"
+    * Enter letter head name **Optional: header mispoint**
     * Checklist `is default` then save
     * Attach image **Optional: mispoint.jpeg** and customize the form
     * Save
@@ -19,19 +19,20 @@ To customize print format to your project, you can do:
     * Enter name: **Optional: Print Member**
     * Enter doctype: **Optional: Master Member**
     * Choose `Yes` on standart
-    * Enter the code of html `printformat.html` to the form
-    * Enter the code of css `printformat.css` to the form
-    
+    * Enter the code of html `assets/printformat.html` to the form
+    * Enter the code of css `assets/printformat.css` to the form
+    example: 
+![alt text](https://github.com/EGEPEE/mispoint/blob/master/assets/letterhead.jpeg "Letter Head")
+
 ------
 # Workflow 
-
+![alt text](https://github.com/EGEPEE/mispoint/blob/master/assets/workflow.png "Workflow MISPoint")
 
 ------
 # Team & Branch
 | Name          | Github                                             | Branch        | 
 | ------------- |:--------------------------------------------------:|:-------------:|
 |               | 	                                                 | Master        |
-|               | 		                                             | DevProcess    |
 | Dimas         | [dshirogami](https://github.com/dshirogami)        |               |
 | Ega           | [EGEPEE](https://github.com/EGEPEE)                |               |
 | Renvil        | [schlucy](https://github.com/schlucy)              |               |
@@ -60,12 +61,11 @@ To customize print format to your project, you can do:
 ------
 # Pull Repository
 1. Open point app **Optional : `cd /opt/erpnext/mispoint/apps/point`**
-2. Pull repo: `git pull --rebase`
-3. Update the bench on */opt/erpnext/mispoint*: `bench update --reset`
-4. Run server: `bench start`
-5. Open new terminal on project path
-6. Migrate app: `bench migrate`
-5. Check your app in the Doctype
+2. Pull repo: `git pull` or `git fetch`
+3. Run server: `bench start`
+4. Open new terminal on project path
+5. Migrate app: `bench migrate`
+6. Check your app in the Doctype
 
 ------
 # Push Repository
@@ -87,6 +87,7 @@ To customize print format to your project, you can do:
     * App/Module: Point
     * Site: mis.point.com
 4. Don't forget to add developer mode!
+4. Don't forget to add naming series **Master Member, Master Item, Master Transaksi**
 
 ------
 # License
