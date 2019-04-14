@@ -43,8 +43,9 @@ class MasterTransaksi(Document):
 			if member.status_member == 'Tidak Aktif':
 				member.status_member = 'Aktif'
 
-			member.point_member = point_member
+
 			member.status_level = status_level
+			member.point_member = point_member
 			member.save()
 
 @frappe.whitelist()
@@ -56,8 +57,3 @@ def hit_point(doctype, name, tukarpoint):
 	member.save()
 
 	return point_member
-
-			
-
-			
-			
