@@ -40,6 +40,9 @@ class MasterTransaksi(Document):
 					status_level = point_scale[i]['tipe_point']
 				i = i + 1
 
+			if member.status_member == 'Tidak Aktif':
+				member.status_member = 'Aktif'
+
 			member.point_member = point_member
 			member.status_level = status_level
 			member.save()

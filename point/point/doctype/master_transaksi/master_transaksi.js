@@ -40,7 +40,7 @@ frappe.ui.form.on('Transaksi Line', {
 	},
 	claim_point: function(frm, cdt, cdn) {
 		var row = locals[cdt][cdn]
-		if (row.claim_point == 'Ya' && (frm.doc.point_member >= row.point_tukar)) {
+		if (row.claim_point == 'Ya' && frm.doc.point_member >= row.point_tukar) {
 				frappe.confirm(
 					'Apakah anda akan menukarkan point?',
 					function(){
