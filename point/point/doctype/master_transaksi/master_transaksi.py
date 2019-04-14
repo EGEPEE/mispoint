@@ -31,7 +31,7 @@ class MasterTransaksi(Document):
 			member = frappe.get_doc('Master Member', self.id_member)
 			point_scale = frappe.get_all('Point Scale', filters={}, fields=['tipe_point', 'min_point'])
 
-			status_awal_level = member.status_level
+			status_level = member.status_level
 			point_member = self.calculate + self.point_member
 			
 			i = 0
@@ -43,8 +43,9 @@ class MasterTransaksi(Document):
 			if member.status_member == 'Tidak Aktif':
 				member.status_member = 'Aktif'
 
-			member.point_member = point_member
+
 			member.status_level = status_level
+			member.point_member = point_member
 			member.save()
 
 @frappe.whitelist()
@@ -56,8 +57,3 @@ def hit_point(doctype, name, tukarpoint):
 	member.save()
 
 	return point_member
-
-			
-
-			
-			
