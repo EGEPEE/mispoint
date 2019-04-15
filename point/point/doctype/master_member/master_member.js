@@ -3,6 +3,6 @@
 
 frappe.ui.form.on('Master Member', {
 	refresh: function(frm) {
-
+		// set status member dan status level member
 	}
 });

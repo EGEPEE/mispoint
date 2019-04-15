@@ -29,11 +29,13 @@ class MasterTransaksi(Document):
 	def change_status_member(self):
 		if self.transaksi:
 			member = frappe.get_doc('Master Member', self.id_member)
-			point_scale = frappe.get_all('Point Scale', filters={}, fields=['tipe_point', 'min_point'])
+			point_scale = frappe.get_all('Point Scale', 
+			filters={}, 
+			fields=['tipe_point', 'min_point'],
+			order_by = 'min_point asc')
 
-			status_level = member.status_level
 			point_member = self.calculate + self.point_member
-			
+
 			i = 0
 			while i < len(point_scale):
 				if point_member >= point_scale[i]['min_point']: 
@@ -42,7 +44,6 @@ class MasterTransaksi(Document):
 
 			if member.status_member == 'Tidak Aktif':
 				member.status_member = 'Aktif'
-
 
 			member.status_level = status_level
 			member.point_member = point_member
