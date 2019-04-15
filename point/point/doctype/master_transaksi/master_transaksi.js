@@ -110,7 +110,7 @@ frappe.ui.form.on('Transaksi Line', {
 cur_frm.set_query('id_item', 'transaksi', function(doc, cdt, cdn){
 	return{
 		filters: [
-  			['Master Item', 'quantity_item', '>=', '0']
+  			['Master Item', 'quantity_item', '>', '0']
 		]
 	}
 });
